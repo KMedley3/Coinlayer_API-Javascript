@@ -1,0 +1,115 @@
+/* RESET DEFAULT BROWSER STYLES */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    color: #333;
+    font-weight: 300;
+    line-height: 1.6;
+    background-image: url(static/images/background-image.jpg);
+}
+
+/* Styles for movie posters */
+.container{
+    width: auto;
+    height: auto;
+    margin: 4rem auto;
+}
+
+/* Styling Cards */
+
+
+.card-gallery{
+    display: grid;
+    width: auto;
+    height: 800px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 5vw);
+    grid-gap: 30.5rem;
+}
+
+.card-holder{
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    border-width: 20%;
+    border-color: skyblue;
+    border-radius: 2%;
+}
+
+.card-body{
+    height: auto;
+    border-top: solid;
+    border-width: 20%;
+    border-color: skyblue;
+    background: linear-gradient(to right, skyblue, black) ;
+    color: gold;
+
+}
+
+.card-img-top{
+
+    height: 220px;
+}
+
+.btn {
+
+    font-weight: 600;
+    font-size: 11px;
+    width: 100px;
+}
+
+.popup{
+
+    width: 400px;
+    background: linear-gradient(to right, skyblue, black) ;
+    border-radius: 6px;
+    border-color: skyblue;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 30px 10px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+}
+
+.popup-text{
+
+    font-weight: 600;
+    margin-top: 10px;
+    color: gold;
+
+}
+
+.close-btn{
+
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: skyblue;
+    cursor: pointer;
+
+}
+
+p{
+    font-size: medium;
+    color: black;
+}
