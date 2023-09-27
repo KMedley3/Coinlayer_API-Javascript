@@ -9,6 +9,29 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+
+    <nav class="nav-container">
+        <div class="nav-header">
+            <p class="nav-p"> Welcome to Krypto Knowledge</p>
+            
+        </div>
+        <div class="item-container">
+            <div class="nav-items">
+                <a href="#">Home</a>
+            </div>
+            
+            <div class="nav-items">
+                <a href="#">More Kryptocurrencies</a>
+            </div>
+            <div class="nav-items">
+                <a href="#">About</a>
+            </div>
+            <div class="nav-items">
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </nav>
+
     <!--Start of Container For Movie Posters-->
     <div class="container">
         <div class="card-gallery p-5 justify-content-center"> 
@@ -16,7 +39,7 @@
                 <img class="card-img-top" src="static/images/bitcoin.jpg" alt="Bitcoin">
                 <div class="card-body text-center">
                   <h3 class="card-title">Bitcoin</h5>
-                  <a href="#" id="bitcoin-btn" onclick="openPopup()" class="btn btn-primary">Get Info</a>
+                  <a href="#" id="bitcoin-btn" onclick="getData()" class="btn btn-primary">Get Info</a>
                 </div>
                 <div class="popup" id="popup">
                     <h2 class="popup-text">Details are listed below:</h2>
@@ -31,7 +54,7 @@
                 <img class="card-img-top" src="static/images/ethereum.jpg" alt="Ethereum">
                 <div class="card-body text-center">
                   <h3 class="card-title">Ethereum</h5>
-                  <a href="#" id="eth-btn" onclick="openPopup()" class="btn btn-primary">Get Info</a>
+                  <a href="#" id="eth-btn" onclick="getData_eth()" class="btn btn-primary">Get Info</a>
                 </div>
                 <div class="popup" id="popup">
                     <h2 class="popup-text">Details are listed below:</h2>
@@ -46,7 +69,7 @@
                 <img class="card-img-top" src="static/images/litecoin.jpg" alt="Litecoin">
                 <div class="card-body text-center">
                   <h3 class="card-title">Litecoin</h5>
-                  <a href="#" id="Litecoin-btn" onclick="openPopup()" class="btn btn-primary">Get Info</a>
+                  <a href="#" id="Litecoin-btn" onclick="getData_ltc()" class="btn btn-primary">Get Info</a>
                 </div>
                 <div class="popup" id="popup">
                     <h2 class="popup-text">Details are listed below:</h2>
@@ -61,7 +84,7 @@
                 <img class="card-img-top" src="static/images/XRP.jpg" alt="XRP">
                 <div class="card-body text-center">
                   <h3 class="card-title">XRP</h5>
-                  <a href="#" id="xrp-btn" onclick="openPopup()" class="btn btn-primary">Get Info</a>
+                  <a href="#" id="xrp-btn" onclick="getData_xrp()" class="btn btn-primary">Get Info</a>
                 </div>
                 <div class="popup" id="popup">
                     <h2 class="popup-text">Details are listed below:</h2>
@@ -71,14 +94,6 @@
                     <button class="close-btn" onclick="closePopup()" >Close</button>
                 </div>
               </div>
-
-            <!-- <figure class="gallery__item gallery__item--5" id="fig5" onclick="event.stopPropagation(); getSong(this.id, event)">
-                <img class="gallery__img" src="images/ray-poster.jpg" alt="I've got a woman">
-            </figure>
-
-            <figure class="gallery__item gallery__item--6" id="fig6" onclick="event.stopPropagation(); getSong(this.id, event)">
-                <img class="gallery__img" src="images/what'slove-poster.jpg" alt="proud mary">
-            </figure> -->
         </div>
     </div>
     

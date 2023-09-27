@@ -1,4 +1,4 @@
-const get_btc = fetch(`http://api.coinlayer.com/api/live?access_key=b7024b68a64392086d4f8d410b7704b3&symbols=BTC`)
+const get_btc = fetch(`http://api.coinlayer.com/api/live?access_key=b7024b68a64392086d4f8d410b7704b3&symbols=BTC.rate`)
 
 const string_key = '?access_key=b7024b68a64392086d4f8d410b7704b3'
 
@@ -12,43 +12,64 @@ let popup = document.getElementById("popup")
 
 let coin_data = document.querySelector('.coin-container')
 
-function openPopup(){
-    popup.classList.add('open-popup')
-    let response = get_btc.json();
-    console.log(response)
- }
+function getData () {
+    const get_btc = fetch(`http://api.coinlayer.com/api/live${string_key}`)
+        .then(res => res.json())
+        .then(data => {
 
-// async function openPopup(){
+            let popup = document.getElementById("popup")
+            let coin_data = document.querySelector('.coin-container')
+            console.log(data.rates.BTC)
+            coin_data.innerHTML=data.rates.BTC
+            popup.classList.add('open-popup')
+        })
     
-//     popup.classList.add("open-popup");
-//     coin_data.innerHTML = `The price is ${get_btc}`;
+}
 
-// }
+function getData_eth () {
+    const get_coin = fetch(`http://api.coinlayer.com/api/live${string_key}`)
+        .then(res => res.json())
+        .then(data => {
 
+            let popup = document.getElementById("popup")
+            let coin_data = document.querySelector('.coin-container')
+            console.log(data.rates.ETH)
+            coin_data.innerHTML=data.rates.ETH
+            popup.classList.add('open-popup')
+        })
+    
+}
 
+function getData_ltc () {
+    const get_coin = fetch(`http://api.coinlayer.com/api/live${string_key}`)
+        .then(res => res.json())
+        .then(data => {
+
+            let popup = document.getElementById("popup")
+            let coin_data = document.querySelector('.coin-container')
+            console.log(data.rates.LTC)
+            coin_data.innerHTML=data.rates.LTC
+            popup.classList.add('open-popup')
+        })
+    
+}
+
+function getData_xrp () {
+    const get_coin = fetch(`http://api.coinlayer.com/api/live${string_key}`)
+        .then(res => res.json())
+        .then(data => {
+
+            let popup = document.getElementById("popup")
+            let coin_data = document.querySelector('.coin-container')
+            console.log(data.rates.XRP)
+            coin_data.innerHTML=data.rates.XRP
+            popup.classList.add('open-popup')
+        })
+    
+}
+
+// To close popups
 
 function closePopup(){
     popup.classList.remove("open-popup");
 }
-
-
-// function openPopup(){
-//     popup.classList.add("open-popup");
-//     coin_data.innerHTML = 
-
-// }
-
-
-
-
-
-//     Access the data given to us by the fetch response (Promise)
-//     const data = await result.json();
-//     return data.access_token
-
-
-
-   
-
-//    http://api.coinlayer.com/api/live?access_key=b7024b68a64392086d4f8d410b7704b3&symbols=BTC,ETH
-//    https://api.coinlayer.com/api/live?access_key=b7024b68a64392086d4f8d410b7704b3&symbols=BTC
